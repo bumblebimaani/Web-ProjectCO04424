@@ -1,0 +1,142 @@
+<!DOCTYPE>
+<html>
+
+
+<head>
+
+ <!-- Latest compiled and minified CSS -->
+ <!--i got part of the bootstrap code from a form builder online, then i adjusted it -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</head>
+
+<!--/* <style>
+body {
+    background-color:  #ffcccc;
+}
+</style> */-->
+
+<body>
+<!--<h1>Welcome to my web server.</h1> -->
+
+<?php 
+
+
+include "db_connect.php";
+
+//include "search_all_recipes.php";
+?>
+  
+
+<form class="form-horizontal" action = "search_keyword.php">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Search for a Recipe</legend>
+
+<!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="keyword">Search Input</label>
+  <div class="col-md-5">
+    <input id="keyword" name="keyword" type="search" placeholder="e.g: chocolate" class="form-control input-md" required="">
+    <p class="help-block">enter a word to search for in all recipes ...</p>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Submit"></label>
+  <div class="col-md-4">
+    <button id="Submit" name="Submit" class="btn btn-info">Search</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+
+
+<!-- this is the html form i built first-->
+ <!--<form action = "add_recipe.php">
+  Please enter a new Recipe:<br>
+  <input type="text" name="newRecipe"><br>
+  <hr>
+  Please enter Recipe Ingredients:<br>
+  <input type="text" name="newIngredients"><br>
+  <hr>
+  Please enter Recipe Instructions:<br>
+  <input type="text" name="newDescription"><br>
+  <input type="submit" value = "submit">
+</form> -->
+
+
+
+<style>
+body{
+background-color : lightgrey;
+}
+</style>
+<!-- this is a bootstrap form-->
+<form class="form-horizontal" action = "add_recipe.php">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Add a Recipe</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="newRecipe">Recipe name:</label>  
+  <div class="col-md-6">
+  <input id="newRecipe" name="newRecipe" type="text" placeholder="" class="form-control input-md" required="">
+  <span class="help-block">enter the name of your recipe here...</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="newIngredients">Ingredients needed:</label>  
+  <div class="col-md-5">
+  <input id="newIngredients" name="newIngredients" type="text" placeholder="e.g: flour, sugar..." class="form-control input-md">
+  <span class="help-block">Enter the ingredients for your recipe here...</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="newDescription">Recipe Instructions: </label>  
+  <div class="col-md-5">
+  <input id="newDescription" name="newDescription" type="text" placeholder="" class="form-control input-md">
+  <span class="help-block">Enter the Recipe instructions here..</span>  
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-success">ADD RECIPE</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<?php
+//include "search_keyword.php";
+
+
+$mysqli->close();
+
+
+?>
+</body>
+
+</html>
+

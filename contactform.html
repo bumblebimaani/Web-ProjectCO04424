@@ -1,0 +1,63 @@
+ <!--this form sends an email to me directly on imaanalkali@gmail.com, part of it is serviced by a website and i made some changes to make it loo user friendly-->
+ <html>
+  <body style="background-color:lightgrey">
+  <body style="background-color:lightgrey">
+  <!--include bootstrap-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<form action="//submit.form" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
+
+<!--javascript to send to email, sourced from www.100foroms.com-->
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
+return true; }
+
+</script>
+
+<div style="background-color:lightgrey">
+<p align = "center"style = "color:blue"><h2><font color = "deeppink">Fill in this form to Contact us </font></h2></p>
+<!-- form -->
+<table style="width:550px;border:0;background-color:lightgrey;margin-top:80px; margin-left:300px"  cellpadding="8" cellspacing="0">
+<tr> <td>
+<label for="Name">Name*:</label>
+</td> <td>
+<input name="Name" type="text" maxlength="60" style="width:250px;" />
+</td> </tr> <tr> <td>
+<label for="PhoneNumber">Phone number:</label>
+</td> <td>
+<input name="PhoneNumber" type="text" maxlength="43" style="width:250px;" />
+</td> </tr> <tr> <td>
+<label for="FromEmailAddress">Email address*:</label>
+</td> <td>
+<input name="FromEmailAddress" type="text" maxlength="90" style="width:250px;" />
+</td> </tr> <tr> <td>
+<label for="Comments">Comments*:</label>
+</td> <td>
+<textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea>
+</td> </tr> <tr> <td>
+* - required fields
+</div>
+</td> <td>
+<!-- sourced from www.100forms.com-->
+<div style="float:right;color:grey"><a href="https://www.100forms.com" id="lnk100" title="form to email" style = "color:lightgrey">form to email</a></div>
+<input name="skip_Submit" type="submit" value="Submit" />
+<script src="https://www.100forms.com/js/FORMKEY:CPD99SERAKRK/SEND:my@email.com" type="text/javascript">
+alert("submitted!");</script>
+</td> </tr>
+</table>
+</form>
+
+</body>
+</html>
+</br>
+<hr>
+<!--home page button-->
+ <a href="index.html" class="btn btn-block btn-primary btn-warning" style="background-color:grey"><span class="glyphicon glyphicon-star-empty"></span>HOME PAGE</a>
+<hr>
+
+<h4>Once you have sent in your comment, we will get in touch with you soon...</h4>
+<h5 ><font color = "red">Thank you!</font></h5>

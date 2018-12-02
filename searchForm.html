@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </head>
+<form class="form-horizontal" action = "search_keyword.php">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Search for a Recipe</legend>
+
+<!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="keyword">Search Input</label>
+  <div class="col-md-5">
+    <input id="keyword" name="keyword" type="search" placeholder="e.g: chocolate" class="form-control input-md" required="">
+    <p class="help-block">enter a word to search for in all recipes ...</p>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Submit"></label>
+  <div class="col-md-4">
+    <button id="Submit" name="Submit" class="btn btn-info">Search</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</html>
